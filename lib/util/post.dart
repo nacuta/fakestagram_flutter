@@ -6,7 +6,7 @@ class Post extends StatefulWidget {
 
   final String avatarImage;
   final String postImageUrl;
-  
+
   @override
   State<Post> createState() => _PostState();
 }
@@ -48,6 +48,7 @@ class _PostState extends State<Post> {
             children: [
               SizedBox(
                 height: 278,
+                width: MediaQuery.of(context).size.width,
                 child: Image.network(
                   widget.postImageUrl,
                   fit: BoxFit.cover,
